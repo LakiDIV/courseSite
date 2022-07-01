@@ -1,0 +1,135 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  color: #383C4A;
+  font: 16px/1.5 "Nunito Sans", sans-serif;
+}
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  background: #f8f8f8;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+body:after {
+  position: fixed;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(253, 253, 253);
+  opacity: 0.92;
+  z-index: 0;
+}
+
+h1 {
+  position: relative;
+  line-height: 2;
+  margin: 1em 0;
+}
+h1:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 4px;
+  width: 80px;
+  background: #08f;
+}
+
+h3 {
+  color: #111;
+  margin-top: 0;
+  line-height: 2;
+  margin-bottom: 0.5rem;
+}
+h3:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 40px;
+  background: #08f;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+.container {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.8rem;
+}
+
+.card {
+  width: calc(33.3% - 1.6rem);
+  margin: 0.8rem;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05), 0 2px 15px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 300ms;
+}
+@media screen and (max-width: 800px) {
+  .card {
+    display: flex;
+    width: calc(100% - 1.6rem);
+  }
+}
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.card--image {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60%;
+  overflow: hidden;
+}
+@media screen and (max-width: 800px) {
+  .card--image {
+    width: 30%;
+    min-width: 140px;
+    padding-bottom: 25%;
+  }
+}
+.card--image img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 800px) {
+  .card--image img {
+    height: 100%;
+    width: auto;
+  }
+}
+.card--content {
+  font-size: 0.9rem;
+  padding: 1rem 2rem 2rem;
+}
+.card--category {
+  font-size: 0.8em;
+  letter-spacing: 0.1ch;
+  padding-top: 1em;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+}

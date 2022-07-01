@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fixedstyle.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href="index.html">CodingLearning</a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      
+<div class="container">
+  <div class="grid">
+    <div class="card">
+      <div class="card--image"><img src="https://shahitinstitute.com/images/Shah-IT-Institute/Course-images2/programming.jpg"/></div>
+      <div class="card--content">
+        <div class="card--category">Basic</div>
+        <h3>Programming Fundamentals</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab incidunt aliquam cumque accusantium.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card--image"><img src="https://geekboots.sfo2.cdn.digitaloceanspaces.com/post/why-c-is-so-popular-and-still-the-best-programming-language-1564571756694.jpg"/></div>
+      <div class="card--content">
+        <div class="card--category">Beginner</div>
+        <h3>Basic C</h3>
+        <p>Learn fundermentals of C language to understand how programming works.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card--image"><img src="https://www.educative.io/v2api/editorpage/5393602882568192/image/6038586442907648"/></div>
+      <div class="card--content">
+        <div class="card--category">Beginner</div>
+        <h3>Object Oriented Programming</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab incidunt aliquam cumque accusantium.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card--image"><img src="http://blog.hyperiondev.com/wp-content/uploads/2019/02/Blog-Types-of-Web-Dev.jpg"/></div>
+      <div class="card--content">
+        <div class="card--category">Beginner</div>
+        <h3>Building Websites</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab incidunt aliquam cumque accusantium.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card--image"><img src="https://www.webtekno.com/images/editor/default/0003/47/9081c992ca8b6f9fd55a9f36c6f5fae08ed5f57f.jpeg"/></div>
+      <div class="card--content">
+        <div class="card--category">Beginner</div>
+        <h3>Introducing to Java</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab incidunt aliquam cumque accusantium.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card--image"><img src="https://marvel-b1-cdn.bc0a.com/f00000000173332/www.openlogic.com/sites/default/files/image/2020-07/image-blog-sql-database.jpg"/></div>
+      <div class="card--content">
+        <div class="card--category">Intermidiate</div>
+        <h3>Working with databases</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab incidunt aliquam cumque accusantium.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const body = document.querySelector("body");
+  const navbar = document.querySelector(".navbar");
+  const menuBtn = document.querySelector(".menu-btn");
+  const cancelBtn = document.querySelector(".cancel-btn");
+  menuBtn.onclick = ()=>{
+    navbar.classList.add("show");
+    menuBtn.classList.add("hide");
+    body.classList.add("disabled");
+  }
+  cancelBtn.onclick = ()=>{
+    body.classList.remove("disabled");
+    navbar.classList.remove("show");
+    menuBtn.classList.remove("hide");
+  }
+  window.onscroll = ()=>{
+    this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+  }
+</script>
+</body>
+</html>

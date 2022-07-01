@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn to code | CodingLearning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="index.html">CodingLearning</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"></div>
+  <div class="about">
+    <div class="content">
+      
+      <div class="title">First, solve the problem. Then, write the code.</div>
+      <p>Coding is a really fun thing to do. If you learn it profierly it is very easy to master. </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit hic excepturi nobis id, eos dolor libero, nam assumenda, at culpa quos perspiciatis ratione ea modi! Natus sapiente a, explicabo sit quisquam eligendi esse provident eos enim doloremque blanditiis aut placeat veniam, libero nostrum quae. Ipsam, iste reprehenderit minima accusantium illo dolorem recusandae, ipsa autem quidem reiciendis a mollitia sit tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloremque perspiciatis voluptate ducimus reiciendis rem expedita voluptatibus dicta harum, quo, aspernatur maiores possimus officia quod? Aliquid molestiae illo sequi, tempora perferendis at incidunt nam porro voluptatibus, iste aperiam blanditiis adipisci ducimus repellendus distinctio nostrum ipsum! Voluptas facilis cum, atque tempora magnam beatae sequi! Doloribus expedita, cupiditate quo quod nemo aliquam, mollitia cum ea nam ullam soluta temporibus! Repudiandae incidunt consequatur distinctio deleniti obcaecati sit facilis unde, quisquam veniam ad doloribus!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet veniam error deleniti cum beatae non assumenda illum est dolores, possimus suscipit quibusdam eveniet id fuga dolore unde modi, sapiente voluptas. Mollitia veritatis explicabo cumque enim quia voluptates provident totam perferendis excepturi animi assumenda optio minus laudantium eveniet possimus amet blanditiis dolore in fuga atque, earum officia tempora quam similique est.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ad sunt distinctio quidem incidunt cupiditate sequi deleniti, corrupti officia nam veritatis facilis veniam dolorum enim nisi ipsum dolor rem! Doloribus, eaque odit voluptatem iste laboriosam provident facere quo. Cum repellat pariatur, error ratione repellendus nisi quam culpa tempora facere in atque nesciunt, magni est aliquid unde soluta optio! Dolore pariatur, quaerat quo in cupiditate deleniti exercitationem. Facilis suscipit corporis unde aut minima nihil, eum molestias itaque, tenetur, beatae ipsa at!</p>
+      <img style="height:200px ;" src="img/Programmer.png" alt="">
+    </div>
+  </div>
+
+
+
+
+  <footer class="footer">
+    <div class="footer__addr">
+      <h1 class="footer__logo">CodingLearning</h1>
+      <h2>Contact</h2>
+      
+      <address>
+        Somewhere In The World.<br>
+            
+        <a class="footer__btn" href="mailto:artifypixels@gmail.com">Email Us</a>
+      </address>
+    </div>
+    
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Courses</h2>
+  
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Programming</a>
+          </li>
+  
+          <li>
+            <a href="#">Designing</a>
+          </li>
+              
+          <li>
+            <a href="#">Marketing</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Related</h2>
+        
+        <ul class="nav__ul nav__ul--extra">
+          <li>
+            <a href="#">Placeholder 1</a>
+          </li>
+          
+          <li>
+            <a href="#">Placeholder 2</a>
+          </li>
+          
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+        
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          
+          <li>
+            <a href="#">Terms of Use</a>
+          </li>
+          
+          <li>
+            <a href="#">Sitemap</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    <div class="legal">
+      <p>&copy; 2022 Artify Pixels. All rights reserved.</p>
+      
+    </div>
+  </footer>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>
